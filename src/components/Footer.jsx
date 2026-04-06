@@ -1,50 +1,58 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Footer() {
+  const PhoneNumber = "621219118993";
+  const WhatsAppLink = `https://wa.me/${PhoneNumber}`;
+  const navigate = useNavigate();
+
   return (
     <div className="bg-[#333333] w-full flex flex-col items-center gap-4 pt-6">
       <div className="w-full flex flex-col lg:flex-row justify-between items-start px-4">
-        <h1 className=" text-white lg:text-[52px]/13 md:text-[40px]/10 text-[32px]/8 font-bold text-left mb-8">
-          X-BOX 
-          <br />
-          HAIR STUDIO
-        </h1>
+        <a href="#hero">
+          <h1 className="cursor-pointer text-white lg:text-[52px]/13 md:text-[40px]/10 text-[32px]/8 font-bold text-left mb-8">
+            X-BOX
+            <br />
+            HAIR STUDIO
+          </h1>
+        </a>
 
         <div className="flex flex-col lg:flex-row justify-between lg:justify-center gap-8 items-start w-fit">
           <div className="w-full">
             <h2 className=" text-white lg:text-[32px] text-[24px]">Tentang</h2>
 
-            <div className="flex flex-col gap-2 text-[#A0A0A0] text-sm md:text-base">
+            <div className="flex flex-col gap-2 text-[#A0A0A0] text-sm md:text-base cursor-pointer">
               <a
-                href="#"
+                href="#hero"
                 className="hover:text-[#D4AF37] transition duration-300"
               >
                 Home
               </a>
               <a
-                href="#"
+                href="#about"
                 className="hover:text-[#D4AF37] transition duration-300"
               >
                 About
               </a>
               <a
-                href="#"
+                href="#services"
                 className="hover:text-[#D4AF37] transition duration-300"
               >
                 Services
               </a>
               <a
-                href="#"
+                href="#gallery"
                 className="hover:text-[#D4AF37] transition duration-300"
               >
                 Gallery
               </a>
-              <a
-                href="#"
-                className="hover:text-[#D4AF37] transition duration-300"
+              <button
+                onClick={() => navigate("/team")}
+                className="text-left hover:text-[#D4AF37] transition duration-300"
               >
                 Meet Our Team
-              </a>
+              </button>
               <a
-                href="#"
+                href="#booking"
                 className="hover:text-[#D4AF37] transition duration-300"
               >
                 Booking
@@ -63,19 +71,25 @@ export default function Footer() {
                 FaQ
               </a>
               <a
-                href="#"
+                href={WhatsAppLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-[#D4AF37] transition duration-300"
               >
                 Support
               </a>
               <a
-                href="#"
+                href={WhatsAppLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-[#D4AF37] transition duration-300"
               >
                 Contact
               </a>
               <a
-                href="#"
+                href={WhatsAppLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-[#D4AF37] transition duration-300"
               >
                 Help
@@ -88,7 +102,9 @@ export default function Footer() {
 
             <div className="flex flex-col gap-2 text-[#A0A0A0] text-sm md:text-base">
               <a
-                href="#"
+                href="https://www.instagram.com/xbox_hairstudio/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-[#D4AF37] transition duration-300"
               >
                 Instagram

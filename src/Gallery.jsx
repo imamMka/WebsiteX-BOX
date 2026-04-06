@@ -52,7 +52,7 @@ export default function Gallery() {
   };
 
   return (
-    <div className="bg-[#121212] w-full min-h-screen flex flex-col gap-12 px-4 lg:px-20 py-12 overflow-hidden">
+    <div id="gallery" className="bg-[#121212] w-full min-h-screen flex flex-col gap-12 px-4 lg:px-20 py-12 overflow-hidden">
       <div className="flex justify-between items-center">
         <h1 className="bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] bg-clip-text text-transparent text-[48px] md:text-[92px] font-bold text-left">
           The Gallery

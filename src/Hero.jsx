@@ -1,6 +1,8 @@
+
+
 export default function Hero() {
   return (
-    <div className="bg-[url('/hero.jpg')] w-full h-screenbg-cover bg-center">
+    <div id="hero" className="bg-[url('/hero.jpg')] w-full h-screenbg-cover bg-center">
       <div className="w-full h-screen  flex flex-col justify-center items-left lg:px-50 px-10">
         <h1 className="bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] bg-clip-text text-transparent font-bold lg:text-[94px]/[90px] text-[40px]/[40px] md:text-[64px]/[64px]">
           Your Style, <br /> Our Signature.
@@ -12,13 +14,13 @@ export default function Hero() {
         </p>
 
         <div className=" flex flex-col lg:flex lg:flex-row justify-left items-left gap-4 mt-8">
-          <button className="cursor-pointer bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] md:text-[20px] text-white font-medium px-4 py-2 rounded-lg lg:w-80 hover:scale-105 transition duration-300">
+          <a href="#booking" className=" text-center cursor-pointer bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] md:text-[20px] text-white font-medium px-4 py-2 rounded-lg lg:w-80 hover:scale-105 transition duration-300">
             Booking sekarang
-          </button>
+          </a>
 
-          <button className="cursor-pointer bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] md:text-[20px] text-white font-medium px-4 py-2 rounded-lg lg:w-80 hover:scale-105 transition duration-500">
+          <a href="#academy" className="text-center cursor-pointer bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] md:text-[20px] text-white font-medium px-4 py-2 rounded-lg lg:w-80 hover:scale-105 transition duration-500">
             Gabung X-BOX Academy
-          </button>
+          </a>
         </div>
       </div>
     </div>

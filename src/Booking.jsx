@@ -112,9 +112,9 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-[#121212] p-6">
+    <div id="booking" className="flex flex-col justify-center items-center min-h-screen bg-[#121212] p-6">
       <h2 className="bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] bg-clip-text text-transparent text-[48px] md:text-[92px] font-bold text-left">
-        Contact Us
+        Booking Now!
       </h2>
 
       <form

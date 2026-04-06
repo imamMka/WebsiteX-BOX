@@ -76,7 +76,7 @@ export default function Testimonials() {
   };
 
   return (
-    <div className="flex flex-col bg-[#121212]">
+    <div id="testimonials" className="flex flex-col bg-[#121212]">
       <div className="flex items-center justify-between px-4 md:px-10 lg:px-20">
         <h1 className="bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] bg-clip-text text-transparent text-[40px] md:text-[64px] lg:text-[92px] font-bold leading-tight">
           What our client said?

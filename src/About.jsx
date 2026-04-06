@@ -1,6 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 export default function About() {
+
+  const navigate = useNavigate();
+
   return (
-    <div className=" bg-[#121212] w-full h-full px-4 lg:px-20 flex flex-col gap-12">
+    <div id="about" className=" bg-[#121212] w-full h-full px-4 lg:px-20 flex flex-col gap-12">
       <h1 className="bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] bg-clip-text text-transparent text-[48px] md:text-[92px] font-bold text-left">
         The Legend
       </h1>
@@ -49,13 +54,13 @@ export default function About() {
         </div>
 
         <div className=" max-w-full flex flex-col lg:flex-row justify-center items-center mt-5 gap-5">
-          <button className=" cursor-pointer bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] md:text-[20px] text-white font-medium px-4 py-2 rounded-lg w-full hover:scale-105 transition duration-500">
+          <button onClick={() => navigate('/team')} className=" cursor-pointer bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] md:text-[20px] text-white font-medium px-4 py-2 rounded-lg w-full hover:scale-105 transition duration-500">
             Meet our team
           </button>
 
-          <button className=" cursor-pointer bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] md:text-[20px] text-white font-medium px-4 py-2 rounded-lg w-full hover:scale-105 transition duration-500">
+          <a href="#booking" className="text-center cursor-pointer bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] md:text-[20px] text-white font-medium px-4 py-2 rounded-lg w-full hover:scale-105 transition duration-500">
             Book Now!
-          </button>
+          </a>
         </div>
       </div>
     </div>

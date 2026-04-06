@@ -42,11 +42,13 @@ export default function FindUs() {
   const [activeLocation, setActiveLocation] = useState("Karawang");
   const [filterOpen, setFilterOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const phoneNumber = "621219118993"; // Ganti dengan nomor WA kamu
+  const message = "Halo X-BOX Hair Studio, saya ingin booking jadwal.";
 
   const filteredData = data.filter(
     (item) =>
       item.Location === activeLocation &&
-      (!search || item.Location.toLowerCase() === search.toLowerCase())
+      (!search || item.Location.toLowerCase() === search.toLowerCase()),
   );
 
   const iframeUrl =
@@ -64,10 +66,15 @@ export default function FindUs() {
 
   const handleSearchChange = (e) => {
     const value = e.target.value;
-    if (locations.some((loc) => loc.toLowerCase() === value.toLowerCase()) || value === "") {
+    if (
+      locations.some((loc) => loc.toLowerCase() === value.toLowerCase()) ||
+      value === ""
+    ) {
       setSearch(value);
     }
   };
+
+  const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <div className="bg-[#121212] w-full min-h-screen flex flex-col gap-12 px-4 lg:px-20 py-12 relative">
@@ -77,7 +84,8 @@ export default function FindUs() {
         </h1>
 
         <p className="text-[#A0A0A0] md:text-[24px] text-[16px] mb-8">
-          Menjangkau pusat industri dan hunian terbaik. Pilih Chapter terdekat untuk transformasi gaya Anda.
+          Menjangkau pusat industri dan hunian terbaik. Pilih Chapter terdekat
+          untuk transformasi gaya Anda.
         </p>
 
         {/* Tombol lokasi + filter */}
@@ -136,26 +144,45 @@ export default function FindUs() {
         <div className="text-[#A0A0A0] flex flex-col lg:flex-row gap-4 items-start justify-center">
           <div className="flex flex-col gap-8 w-full lg:w-1/2">
             {filteredData.map((item) => (
-              <div key={item.id} className="border border-[#2A2A2A] rounded-2xl p-6 bg-[#1A1A1A]">
-                <p className="text-[24px] md:text-[32px] font-semibold text-white mb-2">{item.Name}</p>
-                <p className="text-[#A0A0A0] md:text-[20px] text-[16px] mb-2">{item.Address}</p>
-                {item.Description && <p className="text-[#A0A0A0] md:text-[18px] text-[15px] mb-2">{item.Description}</p>}
-                {item.Price && <p className="text-[#D4AF37] md:text-[20px] text-[16px] font-semibold mb-4">{item.Price}</p>}
-                <div className="flex flex-col lg:flex-row gap-4 mt-4">
-                  <motion.button
+              <div
+                key={item.id}
+                className="border border-[#2A2A2A] rounded-2xl p-6 bg-[#1A1A1A]"
+              >
+                <p className="text-[24px] md:text-[32px] font-semibold text-white mb-2">
+                  {item.Name}
+                </p>
+                <p className="text-[#A0A0A0] md:text-[20px] text-[16px] mb-2">
+                  {item.Address}
+                </p>
+                {item.Description && (
+                  <p className="text-[#A0A0A0] md:text-[18px] text-[15px] mb-2">
+                    {item.Description}
+                  </p>
+                )}
+                {item.Price && (
+                  <p className="text-[#D4AF37] md:text-[20px] text-[16px] font-semibold mb-4">
+                    {item.Price}
+                  </p>
+                )}
+                <div className="flex flex-col lg:flex-row gap-4 mt-4 text-center">
+                  <motion.a
+                    href="#booking"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="cursor-pointer bg-gradient-to-br from-[#D4AF37] to-[#6E5B1D] md:text-[20px] text-white font-medium px-4 py-3 rounded-lg lg:w-80"
                   >
                     Booking sekarang
-                  </motion.button>
-                  <motion.button
+                  </motion.a>
+                  <motion.a
+                    href={waLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="cursor-pointer border-2 border-[#D4AF37] md:text-[20px] text-white font-medium px-4 py-3 rounded-lg lg:w-80"
                   >
                     Chat Admin
-                  </motion.button>
+                  </motion.a>
                 </div>
               </div>
             ))}
