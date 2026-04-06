@@ -224,7 +224,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-blue-600 text-white py-3 rounded-lg hover:scale-105 transition duration-500 disabled:opacity-50"
+          className="w-full bg-gradient-to-b from-[#D4AF37] to-[#6E5B1D] text-white py-3 rounded-lg hover:scale-105 transition duration-500 disabled:opacity-50"
         >
           {loading ? "Sending..." : "Send Message"}
         </button>
