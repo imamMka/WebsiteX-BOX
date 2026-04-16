@@ -1,124 +1,49 @@
-🚀 Website X-BOX
+# ⚠️ IMPORTANT – PLEASE READ BEFORE USING
 
-Website portfolio modern berbasis React (Vite) dengan animasi menggunakan Framer Motion dan styling menggunakan Tailwind CSS.
+Terima kasih telah membeli / menggunakan **Website X-BOX** 🚀
 
-✨ Features
-⚡ Fast performance (Vite)
-🎨 Modern UI dengan Tailwind CSS
-🎞️ Smooth animation menggunakan Framer Motion
-📱 Fully responsive design
-📩 Contact form (EmailJS integration)
-🔥 Clean & reusable component structure
-🛠️ Tech Stack
-⚛️ React (Vite)
-🎨 Tailwind CSS
-🎞️ Framer Motion
-📧 EmailJS
-📦 Installation
+❗ **WAJIB DIBACA SEBELUM MENJALANKAN PROJECT**
 
-Ikuti langkah berikut untuk menjalankan project di lokal:
+Project ini menggunakan beberapa teknologi modern seperti:
+- React (Vite)
+- Tailwind CSS
+- Framer Motion
+- EmailJS
 
-1. Clone Repository
-git clone https://github.com/imamMka/WebsiteX-BOX.git
-cd WebsiteX-BOX
-2. Install Dependencies
-npm install
-3. Install Library Tambahan
-npm install framer-motion
-npm install react-toastify
-npm install @emailjs/browser
-4. Setup Tailwind CSS
+⚠️ Jika Anda tidak membaca dokumentasi ini, kemungkinan besar akan terjadi error saat menjalankan project.
 
-Jika belum terinstall:
+---
 
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+## 📌 Hal yang WAJIB diperhatikan
 
-Edit tailwind.config.js:
+1. Anda HARUS menginstall semua dependencies terlebih dahulu
+2. Anda HARUS setup EmailJS (jika menggunakan form)
+3. Anda HARUS memahami basic React & Tailwind
+4. Ikuti langkah installation step-by-step di bawah ini
 
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+---
 
-Tambahkan ke src/index.css:
+## ❌ Kesalahan yang sering terjadi
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-▶️ Running Project
-npm run dev
+- Tidak menjalankan `npm install`
+- Tidak install framer-motion / emailjs
+- Tidak setup Tailwind dengan benar
+- Tidak mengganti API Key EmailJS
 
-Buka di browser:
+---
 
-http://localhost:5173
-📁 Project Structure
-src/
-│── components/     # Reusable components
-│── pages/          # Page sections
-│── assets/         # Images & icons
-│── App.jsx
-│── main.jsx
-🎞️ Framer Motion Usage
+## 💬 Support
 
-Contoh penggunaan animasi:
+Jika Anda mengalami kendala:
+- Pastikan sudah membaca README ini dengan lengkap
+- Cek kembali langkah installation
 
-import { motion } from "framer-motion";
+Jika masih error, silakan hubungi:
+📧 Email: (isi email kamu)
+📱 Instagram / WhatsApp: (opsional)
 
-<motion.div
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.5 }}
->
-  Hello World
-</motion.div>
-🎨 Tailwind Usage
+---
 
-Contoh styling:
+Dengan menggunakan project ini, Anda dianggap sudah membaca dan memahami seluruh panduan di README ini.
 
-<div className="bg-black text-white p-4 rounded-xl hover:scale-105 transition duration-300">
-  Tailwind Component
-</div>
-📧 EmailJS Setup
-Buat akun di EmailJS
-Ambil:
-Service ID
-Template ID
-Public Key
-
-Contoh config:
-
-const SERVICE_ID = "YOUR_SERVICE_ID";
-const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
-📸 Preview
-
-Tambahkan screenshot di sini nanti:
-
-/public/preview.png
-🚀 Deployment
-
-Bisa deploy ke:
-
-Vercel
-Netlify
-GitHub Pages
-
-Contoh build:
-
-npm run build
-👨‍💻 Author
-
-Imam Mka
-
-GitHub: https://github.com/imamMka
-📄 License
-
-This project is open-source and free to use.
+Terima kasih 🙌
