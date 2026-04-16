@@ -39,8 +39,8 @@ Jika Anda mengalami kendala:
 - Cek kembali langkah installation
 
 Jika masih error, silakan hubungi:
-📧 Email: (isi email kamu)
-📱 Instagram / WhatsApp: (opsional)
+📧 Email: (imammka23@gmail.com)
+📱 Instagram / WhatsApp: (+62-812-1911-8993)
 
 ---
 
