@@ -134,7 +134,16 @@ export default function Footer() {
       <div className="flex lg:flex-row flex-col justify-between items-center w-full h-full bg-white text-[15px] p-2">
         <p className="text-black text-sm md:text-base ">
           &copy; {new Date().getFullYear()} X Box Barbershop. All rights
-          reserved.
+          reserved. Powered By{" "}
+          <a
+            href="https://imammka.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#D4AF37] hover:underline transition duration-300"
+          >
+            ImamMka
+          </a>
+          .
         </p>
         <div className="flex gap-4">
           <a
